@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sample Framework</title>
+    <style>
+        .Outer-Container {
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .Container-1 {
+            width: 100%;
+            height: 20%;
+        }
+        
+        .Container-Row {
+            display: flex;
+            width: 100%;
+            height: 80%;
+            box-sizing: border-box;
+        }
+        
+        .Container-2 {
+            width: 48%;
+            border: 1px solid green;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .Container-3 {
+            border: 1px solid blue;
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Outer-Container">
+        <div class="Container-1">
+            <h1>Sample Framework</h1>
+        </div>
+        <div class="Container-Row">
+            <div class="Container-2">
+                <p>Content of Container 2</p>
+            </div>
+            <div class="Container-3">
+                <p>Content of Container 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

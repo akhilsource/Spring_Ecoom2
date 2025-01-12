@@ -1,0 +1,132 @@
+/* General styling for the item card container */
+
+.item-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    max-width: 300px;
+    margin: 16px;
+    padding: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.item-card-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Styling for the image section */
+
+.item-card-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+
+/* Styling for the item details section */
+
+.item-card-details-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.item-card-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.item-card-price {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #ff6f61;
+}
+
+.item-card-rating {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 16px;
+}
+
+
+/* Quantity controls styling */
+
+.item-card-quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.quantity-button {
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.quantity-button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.quantity-button:hover:not(:disabled) {
+    background-color: #ff4c3b;
+}
+
+.quantity-value {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+
+/* Styling for the action buttons */
+
+.item-card-actions-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.add-to-cart-button,
+.buy-now-button {
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 45%;
+    text-align: center;
+}
+
+.add-to-cart-button:hover,
+.buy-now-button:hover {
+    background-color: #ff4c3b;
+}
+
+.add-to-cart-button:disabled,
+.buy-now-button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
