@@ -1,0 +1,52 @@
+/* Container for the entire carousel */
+
+.carousel-container {
+    width: 100vw;
+    /* Ensure it takes the full width of the viewport */
+    height: 70vh;
+    /* Make it take the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    /* Hide any overflowing content */
+}
+
+
+/* Custom carousel styling */
+
+.carousel-custom .carousel-item {
+    transition: transform 0.5s ease;
+    /* Smooth transition effect */
+}
+
+
+/* Image styling for the carousel */
+
+.carousel-image {
+    object-fit: cover;
+    /* Ensure images cover the area without distortion */
+    width: 100%;
+    /* Make the image span the entire width of the viewport */
+    height: 100vh;
+    /* Make the image take the full height of the viewport */
+}
+
+
+/* Adjust carousel height for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .carousel-image {
+        height: 60vh;
+        /* Adjust height for mobile devices */
+    }
+}
+
+
+/* Ensure smooth fading between carousel images */
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+    transition: opacity 1s ease-in-out;
+}

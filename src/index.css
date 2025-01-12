@@ -1,0 +1,89 @@
+/* index.css */
+
+.Index-Body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    /* Light background for contrast */
+}
+
+.Index-navbar-Container {
+    width: 100vw;
+}
+
+.Index-Recently-uploaded {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.Index-product {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    /* Space between items */
+    width: 100%;
+    padding: 0 20px;
+    /* Padding for the grid */
+}
+
+
+/* Item Styles */
+
+.Item {
+    background-color: white;
+    /* Item background */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    overflow: hidden;
+    /* Prevent overflow */
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+    text-align: center;
+    /* Center text */
+}
+
+.Item:hover {
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+.Item img {
+    width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.Item h2,
+.Item p {
+    margin: 10px;
+    /* Margin for text */
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .Index-product {
+        grid-template-columns: repeat(3, 1fr);
+        /* Show 3 items per row on larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .Index-product {
+        grid-template-columns: repeat(2, 1fr);
+        /* Show 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .Index-product {
+        grid-template-columns: 1fr;
+        /* Show 1 item per row on small screens */
+    }
+}

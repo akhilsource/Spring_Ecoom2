@@ -1,0 +1,151 @@
+/* General navbar styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.navbar {
+    background-color: #232f3e;
+    /* Dark blue background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    /* Use the new font */
+    font-size: 2rem;
+    /* Adjust size */
+    color: #ffff;
+    margin: 0 0 0 5px;
+    /* Reduced margin to push the logo slightly left */
+    text-transform: none;
+    /* Remove uppercase if added earlier */
+    letter-spacing: 1px;
+    /* Adjust letter spacing if needed */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    /* Bright yellow */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #e67e22;
+    /* Darker yellow on hover */
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+.nav-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 24px;
+    /* Adjust icon size */
+    color: white;
+    /* Icon color */
+}
+
+.myorders-button {
+    background-color: #3498db;
+    /* Blue */
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.myorders-button:hover {
+    background-color: #2980b9;
+    /* Darker blue */
+}
+
+
+/* Mobile view */
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .search-bar {
+        width: 90%;
+    }
+    .nav-buttons {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-buttons button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
